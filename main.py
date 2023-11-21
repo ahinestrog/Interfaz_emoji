@@ -64,8 +64,6 @@ class Widget(QWidget):
             pattern = re.compile('|'.join(re.escape(k) for k in emojis.keys()), re.IGNORECASE)
             find = pattern.search(cadena)
             cadena_dic = cadena
-            if find is None:
-                return cadena
             while find is not None:
                 cont_emojis += 1
                 emoji = emojis[find.group(0)]     #Te devuelve la cadena encontrada, por ejemplo, ":)" te de vuelve el emoji
